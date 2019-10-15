@@ -13,7 +13,7 @@ public class punkt4 {
         System.out.println("a)="+method(0,Math.PI,eps,func[0]));
         System.out.println("б)="+method(0,0.9,eps,func[1]));
         System.out.println("в)="+method(2.1,5,eps,func[2]));
-        System.out.println("г)="+method(Math.PI,Math.PI * 2,eps,func[3]));
+        System.out.println("г)="+method(Math.PI,Math.PI*2,eps,func[3]));
     }
 
     public static double method (double k, double m, double E, Function function) {
