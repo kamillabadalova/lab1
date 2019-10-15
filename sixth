@@ -1,0 +1,40 @@
+
+public class sixth {
+	 public static boolean lengthis5(String ve){
+	    	if(ve.length()==5) {
+	        return true; }
+	    	return false;
+	    }
+	    public static boolean palindrom(String k){
+	        if (k.length()== 1)
+	            return true ;
+	        for (int i = 0;i<(k.length())/2; i++)  {
+	            if (k.charAt(i)!=k.charAt(k.length()-i-1)) 
+	                return false; }
+	            return true; }
+	    public static boolean ww(String ve){
+	       if( ve.charAt(0)=='w' || ve.charAt(0)=='w') {
+		return true;}
+		return false;
+	    }
+	public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+        vector.add("w");
+        vector.add("wow");
+        vector.add("wowow");
+        vector.add("nwowo");
+        int j=0;
+		int q=0;
+		int s=0;
+        for (int i=0; i<4; i++) {
+         if ( lengthis5(vector.get(i)) )
+        	 j++;
+         if ( palindrom(vector.get(i)) )
+        	 q++;
+         if ( ww(vector.get(i)) )
+            s++; }
+        System.out.println("Количество пятибуквенных слов = "+j);
+        System.out.println("Количество палиндромов = "+q);
+        System.out.println("Количество слов, начинающихся с буквы w = "+s); }
+   
+}
