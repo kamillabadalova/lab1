@@ -1,0 +1,21 @@
+import static  java.lang.Math.*;
+public class punkt5 {
+	 public static void main(String[] args) {
+	    double k=-PI;
+	    double m=PI;
+	    Function [] Integral = new Function [3]; 
+		  Integral[0]= x -> (2*Math.sin(x) + 1);
+	    Integral[1]= x -> (-Math.pow(x/PI,2)-2*x+5*PI);
+	  	Integral[2]= x -> (1/2*Math.pow(cos(x),2)+1);
+	    System.out.println("Интеграл а)= "+calc(k,m,10,Integral[0]));
+	    System.out.println("Интеграл б)= "+calc(k,m,10,Integral[1]));
+	    System.out.println("Интеграл в)= "+calc(k,m,10,Integral[2]));
+	    }
+	    public static double calc(double k, double m, int n, Function function) {
+	        double ans = 0;
+	        double h =(m-k)/n;
+	        for(int i=0;i<n; i++) {
+	        ans+=function.calculateintegral(k+h*(i+0.5))*h; }
+	        return ans;
+	    }
+	}
