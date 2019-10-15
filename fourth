@@ -22,10 +22,10 @@ public class punkt4 {
         while(m-k>=E) {
            half=(m-k)/2;
             mid=k+half; 
-        if (Math.signum(function.calculateintegral(k))==Math.signum(function.calculateintegral(mid))) {
-        k=mid; }
-        else {
+        if (Math.signum(function.calculateintegral(k))!=Math.signum(function.calculateintegral(mid))) {
         m=mid; }
+        else {
+        k=mid; }
         }
         return mid;
     }
