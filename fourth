@@ -1,0 +1,32 @@
+
+import static  java.lang.Math.*;
+
+public class punkt4 {
+
+    public static void main(String[] args) {
+        double eps=0.0001;
+        Function [] func=new Function [4];
+        func[0]=x -> x*Math.sin(x)-0.5;
+        func[1]=x -> Math.log10(Math.pow(x,2)-3*x+2);
+        func[2]=x -> Math.log10(Math.pow(x,2)-3*x+2);
+       	func[3]=x -> 0.5*Math.tan((2/3)*(x + Math.PI/4)-1);
+        System.out.println("a)="+method(0,Math.PI,eps,func[0]));
+        System.out.println("б)="+method(0,0.9,eps,func[1]));
+        System.out.println("в)="+method(2.1,5,eps,func[2]));
+        System.out.println("г)="+method(Math.PI,Math.PI * 2,eps,func[3]));
+    }
+
+    public static double method (double k, double m, double E, Function function) {
+     double half;
+    double mid=0;
+        while(m-k>=E) {
+           half=(m-k)/2;
+            mid=k+half; 
+        if (Math.signum(function.calculateintegral(k))==Math.signum(function.calculateintegral(mid))) {
+        k=mid; }
+        else {
+        m=mid; }
+        }
+        return mid;
+    }
+}
