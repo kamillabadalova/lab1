@@ -35,6 +35,6 @@ public class sixth {
             s++; }
         System.out.println("Количество пятибуквенных слов = "+j);
         System.out.println("Количество палиндромов = "+q);
-        System.out.println("Количество слов, начинающихся с буквы w = "+s); }
+        System.out.println("Количество слов, начинающихся с буквы w или W = "+s); }
    
 }
